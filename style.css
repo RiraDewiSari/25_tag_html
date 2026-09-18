@@ -1,0 +1,330 @@
+/* =========================================
+   PENGATURAN DASAR
+========================================= */
+body {
+    background-color: #f1f5f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 120px; 
+    padding: 60px 0 120px 0;
+    margin: 0;
+}
+
+.stage-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.stage-title {
+    background-color: #0f172a;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 22px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* =========================================
+   SISTEM HOVER ANTI-TUMPUK (KUNCI UTAMA)
+========================================= */
+.tag-box {
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    border: 2px dashed transparent;
+}
+
+.layout-box:hover {
+    border-color: #3b82f6;
+    background-color: rgba(59, 130, 246, 0.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.content-box:hover {
+    border-color: #f97316;
+    background-color: rgba(249, 115, 22, 0.04);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transform: translateX(4px);
+}
+
+/* Khusus hover script tag dibuat warna ungu */
+.script-tag:hover {
+    border-color: #8b5cf6;
+    background-color: rgba(139, 92, 246, 0.05);
+}
+
+/* =========================================
+   LABEL POP-UP NAMA TAG HTML
+========================================= */
+.label {
+    position: absolute;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    opacity: 0; 
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    z-index: 20;
+}
+
+.label-layout {
+    background-color: #3b82f6;
+    top: -15px; 
+    left: -10px;
+}
+
+.label-content {
+    background-color: #f97316;
+    top: -15px;
+    right: -10px; 
+    left: auto; 
+}
+
+.tag-box:hover > .label {
+    opacity: 1;
+}
+
+/* =========================================
+   DESAIN BROWSER (KERANGKA LUAR)
+========================================= */
+.browser-window {
+    background-color: #ffffff;
+    width: 900px;
+    min-height: 450px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.head-tag {
+    background-color: #e2e8f0;
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #cbd5e1;
+    border-radius: 8px 8px 0 0;
+}
+
+.mac-dots { display: flex; gap: 8px; margin-right: 20px; }
+.dot { width: 12px; height: 12px; border-radius: 50%; }
+.red { background-color: #ff5f56; }
+.yellow { background-color: #ffbd2e; }
+.green { background-color: #27c93f; }
+
+.title-tag {
+    background-color: #ffffff;
+    padding: 6px 20px;
+    border-radius: 6px 6px 0 0;
+    font-size: 13px;
+    font-weight: bold;
+    color: #334155;
+    margin-bottom: -14px;
+}
+
+.empty-body {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8fafc;
+    margin: 20px;
+    border-radius: 8px;
+}
+.keterangan { color: #64748b; font-size: 18px; }
+
+/* =========================================
+   DESAIN WEBSITE NYATA (LAYOUT)
+========================================= */
+.layout-mode {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: #ffffff;
+    margin: 15px;
+}
+
+.real-header {
+    background-color: #1e293b;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px 8px 0 0;
+}
+
+.real-nav {
+    background-color: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 15px 40px;
+    display: flex;
+    gap: 30px;
+    color: #475569;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.real-main {
+    padding: 10px 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.real-layout-wrapper {
+    display: flex;
+    gap: 30px;
+    flex-grow: 1;
+    padding: 15px; 
+}
+
+.real-section {
+    flex: 2.5;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    padding: 20px;
+}
+
+.real-article {
+    flex: 1;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.real-footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    border-radius: 0 0 8px 8px;
+    margin-top: 10px;
+}
+
+.wireframe .real-header, .wireframe .real-nav, .wireframe .real-main, .wireframe .real-section, .wireframe .real-article, .wireframe .real-footer {
+    background-color: #f1f5f9;
+    border: 2px solid #cbd5e1; 
+    color: #94a3b8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60px;
+}
+
+/* =========================================
+   DESAIN ISI KONTEN (TEKS, GAMBAR, LINK)
+========================================= */
+.content-tag { padding: 10px; border-radius: 6px; }
+
+.h1-tag { font-size: 28px; font-weight: bold; color: #0f172a; margin-top:0;}
+
+.img-tag {
+    width: 100%;
+    height: 160px;
+    background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #4f46e5;
+    font-weight: bold;
+    font-size: 18px;
+    border: 1px solid #c7d2fe;
+}
+
+.p-tag { color: #475569; font-size: 15px; }
+
+.a-tag {
+    color: #2563eb;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    align-self: flex-start;
+}
+
+.table-tag {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+}
+
+.span-tag { cursor: default; }
+
+/* =========================================
+   DESAIN INTERAKSI (LIST, FORM, SCRIPT)
+========================================= */
+.ol-tag {
+    padding: 15px 15px 15px 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    list-style-type: decimal;
+}
+
+.ul-tag {
+    padding: 15px 15px 15px 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    list-style-type: disc;
+}
+.li-tag { color: #334155; font-size: 14px; display: list-item; padding: 5px; }
+
+.form-tag {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+}
+.label-tag {
+    padding: 2px 5px;
+}
+.input-tag {
+    background-color: #f8fafc;
+    border: 1px solid #cbd5e1;
+    padding: 10px 12px;
+    border-radius: 6px;
+    color: #94a3b8;
+    font-size: 13px;
+}
+.button-tag {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* SCRIPT TAG (Bagian Bawah) */
+.script-tag {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    margin: 0 40px 10px 40px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 6px;
+}

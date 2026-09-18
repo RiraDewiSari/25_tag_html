@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25 Tag HTML - Step by Step</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ==========================================
+         KELOMPOK 1: FONDASI
+    =========================================== -->
+    <div class="stage-container">
+        <h2 class="stage-title">Kelompok 1: Fondasi (Struktur Dasar)</h2>
+        <div class="browser-window tag-box layout-box html-tag">
+            <span class="label label-layout">Tag &lt;html&gt;</span>
+            
+            <div class="tag-box layout-box head-tag">
+                <span class="label label-layout" style="right: 15px; left: auto;">Tag &lt;head&gt;</span>
+                <div class="mac-dots"><div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div></div>
+                <div class="tag-box layout-box title-tag">
+                    <span class="label label-layout" style="top: -22px; left: 0px;">Tag &lt;title&gt;</span>
+                    Codestory Web
+                </div>
+            </div>
+
+            <div class="tag-box layout-box body-tag empty-body">
+                <span class="label label-layout">Tag &lt;body&gt;</span>
+                <p class="keterangan">Ruko masih kosong. Siap dibangun!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         KELOMPOK 2: LAYOUT & STRUKTUR
+    =========================================== -->
+    <div class="stage-container">
+        <h2 class="stage-title">Kelompok 2: Layout & Struktur Halaman (Wireframe)</h2>
+        <div class="browser-window tag-box layout-box html-tag">
+            <div class="tag-box layout-box head-tag">
+                <div class="mac-dots"><div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div></div>
+                <div class="title-tag" style="border:1px solid #cbd5e1; border-bottom:none;">Codestory Web</div>
+            </div>
+
+            <div class="tag-box layout-box body-tag layout-mode wireframe">
+                <span class="label label-layout">Tag &lt;body&gt;</span>
+
+                <div class="tag-box layout-box real-header"><span class="label label-layout">Tag &lt;header&gt;</span>(Area Header & Logo)</div>
+                <div class="tag-box layout-box real-nav"><span class="label label-layout">Tag &lt;nav&gt;</span>(Area Navigasi)</div>
+
+                <div class="tag-box layout-box real-main">
+                    <span class="label label-layout">Tag &lt;main&gt;</span>
+                    
+                    <div class="tag-box layout-box real-layout-wrapper">
+                        <span class="label label-layout" style="top: -12px;">Tag &lt;div&gt;</span>
+                        
+                        <div class="tag-box layout-box real-section"><span class="label label-layout">Tag &lt;section&gt;</span>(Area Konten Utama)</div>
+                        <div class="tag-box layout-box real-article"><span class="label label-layout">Tag &lt;article&gt;</span>(Area Sidebar)</div>
+                    </div>
+                </div>
+
+                <div class="tag-box layout-box real-footer"><span class="label label-layout">Tag &lt;footer&gt;</span>(Area Footer)</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         KELOMPOK 3: ISI KONTEN (TEKS, GAMBAR, LINK)
+    =========================================== -->
+    <div class="stage-container">
+        <h2 class="stage-title">Kelompok 3: Isi Konten Web Nyata</h2>
+        <div class="browser-window tag-box layout-box html-tag">
+            <div class="tag-box layout-box head-tag">
+                <div class="mac-dots"><div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div></div>
+                <div class="title-tag" style="border:1px solid #cbd5e1; border-bottom:none;">Codestory Web</div>
+            </div>
+
+            <div class="tag-box layout-box body-tag layout-mode">
+                <span class="label label-layout">Tag &lt;body&gt;</span>
+
+                <div class="tag-box layout-box real-header">
+                    <span class="label label-layout">Tag &lt;header&gt;</span><h2 style="margin:0;">CodeStory.</h2>
+                </div>
+                <div class="tag-box layout-box real-nav">
+                    <span class="label label-layout">Tag &lt;nav&gt;</span><span>Home</span><span>About</span><span>Contact</span>
+                </div>
+
+                <div class="tag-box layout-box real-main">
+                    <span class="label label-layout">Tag &lt;main&gt;</span>
+                    <div class="tag-box layout-box real-layout-wrapper">
+                        
+                        <div class="tag-box layout-box real-section">
+                            <span class="label label-layout">Tag &lt;section&gt;</span>
+                            
+                            <div class="tag-box content-box content-tag h1-tag"><span class="label label-content">Tag &lt;h1&gt;</span>Cara Belajar HTML Cepat</div>
+                            <div class="tag-box content-box content-tag img-tag"><span class="label label-content">Tag &lt;img&gt;</span>🖼️ Gambar Ilustrasi</div>
+                            
+                            <!-- Ada Tag SPAN di dalam P -->
+                            <div class="tag-box content-box content-tag p-tag" style="line-height: 2;">
+                                <span class="label label-content">Tag &lt;p&gt;</span>
+                                Belajar HTML cukup pahami
+                                <div class="tag-box content-box span-tag" style="display:inline-block; padding: 2px 6px; background-color: #fef08a; border-radius: 4px; font-weight: bold; margin: 0 4px;">
+                                    <span class="label label-content" style="top: -20px;">Tag &lt;span&gt;</span>strukturnya
+                                </div>
+                                saja, kamu sudah bisa bikin web utuh.
+                            </div>
+
+                            <!-- Tag TABLE -->
+                            <div class="tag-box content-box content-tag table-tag">
+                                <span class="label label-content">Tag &lt;table&gt;</span>
+                                <table style="width:100%; border-collapse:collapse; text-align:left; font-size:14px; margin-top:5px;">
+                                    <tr><th style="border-bottom:1px solid #cbd5e1; padding:5px;">Jadwal Belajar</th></tr>
+                                    <tr><td style="padding:5px; color:#475569;">Modul 1: HTML Dasar</td></tr>
+                                </table>
+                            </div>
+
+                            <div class="tag-box content-box content-tag a-tag"><span class="label label-content">Tag &lt;a&gt;</span>Baca Selengkapnya &rarr;</div>
+                        </div>
+
+                        <div class="tag-box layout-box real-article empty-sidebar">
+                            <span class="label label-layout">Tag &lt;article&gt;</span>
+                            <p style="color:#94a3b8; text-align:center; margin-top:80px;">(Sidebar kosong)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tag-box layout-box real-footer">
+                    <span class="label label-layout">Tag &lt;footer&gt;</span>&copy; 2025 CodeStory
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         KELOMPOK 4: INTERAKSI, DATA & SCRIPT (25 TAG LENGKAP)
+    =========================================== -->
+    <div class="stage-container">
+        <h2 class="stage-title">Kelompok 4: Data, Form & Script (Hasil Akhir)</h2>
+        <div class="browser-window tag-box layout-box html-tag">
+            <div class="tag-box layout-box head-tag">
+                <div class="mac-dots"><div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div></div>
+                <div class="title-tag" style="border:1px solid #cbd5e1; border-bottom:none;">Codestory Web</div>
+            </div>
+
+            <div class="tag-box layout-box body-tag layout-mode">
+                <span class="label label-layout">Tag &lt;body&gt;</span>
+
+                <div class="tag-box layout-box real-header"><span class="label label-layout">Tag &lt;header&gt;</span><h2 style="margin:0;">CodeStory.</h2></div>
+                <div class="tag-box layout-box real-nav"><span class="label label-layout">Tag &lt;nav&gt;</span><span>Home</span><span>About</span><span>Contact</span></div>
+
+                <div class="tag-box layout-box real-main">
+                    <span class="label label-layout">Tag &lt;main&gt;</span>
+                    <div class="tag-box layout-box real-layout-wrapper">
+                        
+                        <div class="tag-box layout-box real-section">
+                            <span class="label label-layout">Tag &lt;section&gt;</span>
+                            <div class="tag-box content-box content-tag h1-tag"><span class="label label-content">Tag &lt;h1&gt;</span>Cara Belajar HTML Cepat</div>
+                            <div class="tag-box content-box content-tag img-tag"><span class="label label-content">Tag &lt;img&gt;</span>🖼️ Gambar Ilustrasi</div>
+                            <div class="tag-box content-box content-tag p-tag" style="line-height: 2;"><span class="label label-content">Tag &lt;p&gt;</span>Belajar HTML cukup pahami <div class="tag-box content-box span-tag" style="display:inline-block; padding: 2px 6px; background-color: #fef08a; border-radius: 4px; font-weight: bold; margin: 0 4px;"><span class="label label-content" style="top:-20px;">Tag &lt;span&gt;</span>strukturnya</div> saja.</div>
+                            
+                            <div class="tag-box content-box content-tag table-tag">
+                                <span class="label label-content">Tag &lt;table&gt;</span>
+                                <table style="width:100%; border-collapse:collapse; text-align:left; font-size:14px; margin-top:5px;">
+                                    <tr><th style="border-bottom:1px solid #cbd5e1; padding:5px;">Jadwal Belajar</th></tr>
+                                    <tr><td style="padding:5px; color:#475569;">Modul 1: HTML Dasar</td></tr>
+                                </table>
+                            </div>
+
+                            <div class="tag-box content-box content-tag a-tag"><span class="label label-content">Tag &lt;a&gt;</span>Baca Selengkapnya &rarr;</div>
+                        </div>
+
+                        <!-- SIDEBAR: OL, UL, FORM, LABEL, INPUT, BUTTON -->
+                        <div class="tag-box layout-box real-article">
+                            <span class="label label-layout">Tag &lt;article&gt;</span>
+                            
+                            <!-- Tag OL -->
+                            <h3 style="margin:0 0 10px 0; font-size:15px;">Terpopuler</h3>
+                            <div class="tag-box content-box ol-tag" style="margin-bottom: 20px;">
+                                <span class="label label-content">Tag &lt;ol&gt;</span>
+                                <div class="tag-box content-box li-tag"><span class="label label-content">Tag &lt;li&gt;</span>CSS Modern</div>
+                            </div>
+
+                            <!-- Tag UL -->
+                            <h3 style="margin:0 0 10px 0; font-size:15px;">Kategori</h3>
+                            <div class="tag-box content-box ul-tag">
+                                <span class="label label-content">Tag &lt;ul&gt;</span>
+                                <div class="tag-box content-box li-tag"><span class="label label-content">Tag &lt;li&gt;</span>Tips Coding</div>
+                            </div>
+
+                            <h3 style="margin:25px 0 10px 0; font-size:15px;">Newsletter</h3>
+                            <div class="tag-box content-box form-tag">
+                                <span class="label label-content">Tag &lt;form&gt;</span>
+                                
+                                <!-- Tag LABEL -->
+                                <div class="tag-box content-box label-tag" style="margin-bottom: 2px;">
+                                    <span class="label label-content">Tag &lt;label&gt;</span><span style="font-size:13px; font-weight:600; color:#334155;">Email Anda:</span>
+                                </div>
+
+                                <div class="tag-box content-box input-tag"><span class="label label-content">Tag &lt;input&gt;</span>Ketik email...</div>
+                                <div class="tag-box content-box button-tag"><span class="label label-content">Tag &lt;button&gt;</span>Subscribe</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Tag SCRIPT di bawah main, sebelum footer -->
+                <div class="tag-box content-box script-tag">
+                    <span class="label label-content" style="background-color: #8b5cf6;">Tag &lt;script&gt;</span>
+                    <code style="color: #6d28d9; font-size:13px;">// Menjalankan animasi pop-up (JS)</code>
+                </div>
+
+                <div class="tag-box layout-box real-footer"><span class="label label-layout">Tag &lt;footer&gt;</span>&copy; 2025 CodeStory</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
