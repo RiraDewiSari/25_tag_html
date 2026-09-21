@@ -1,6 +1,10 @@
 /* =========================================
-   PENGATURAN DASAR
+   PENGATURAN DASAR (MENDUKUNG RESPONSIVE)
 ========================================= */
+* {
+    box-sizing: border-box; /* Kunci utama responsivitas */
+}
+
 body {
     background-color: #f1f5f9;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -8,7 +12,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 120px; 
-    padding: 60px 0 120px 0;
+    padding: 60px 15px 120px 15px; /* Tambah padding kiri-kanan untuk mobile */
     margin: 0;
 }
 
@@ -27,10 +31,11 @@ body {
     font-size: 22px;
     margin-bottom: 30px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
 }
 
 /* =========================================
-   SISTEM HOVER ANTI-TUMPUK (KUNCI UTAMA)
+   SISTEM HOVER ANTI-TUMPUK
 ========================================= */
 .tag-box {
     position: relative;
@@ -51,7 +56,6 @@ body {
     transform: translateX(4px);
 }
 
-/* Khusus hover script tag dibuat warna ungu */
 .script-tag:hover {
     border-color: #8b5cf6;
     background-color: rgba(139, 92, 246, 0.05);
@@ -96,7 +100,8 @@ body {
 ========================================= */
 .browser-window {
     background-color: #ffffff;
-    width: 900px;
+    width: 100%; /* Lebar responsif */
+    max-width: 900px; /* Batas maksimal di PC */
     min-height: 450px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     border-radius: 10px;
@@ -137,6 +142,8 @@ body {
     background-color: #f8fafc;
     margin: 20px;
     border-radius: 8px;
+    text-align: center;
+    padding: 20px;
 }
 .keterangan { color: #64748b; font-size: 18px; }
 
@@ -227,7 +234,6 @@ body {
    DESAIN ISI KONTEN (TEKS, GAMBAR, LINK)
 ========================================= */
 .content-tag { padding: 10px; border-radius: 6px; }
-
 .h1-tag { font-size: 28px; font-weight: bold; color: #0f172a; margin-top:0;}
 
 .img-tag {
@@ -255,17 +261,13 @@ body {
     align-self: flex-start;
 }
 
-.table-tag {
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
-}
-
+.table-tag { background-color: #ffffff; border: 1px solid #e2e8f0; }
 .span-tag { cursor: default; }
 
 /* =========================================
    DESAIN INTERAKSI (LIST, FORM, SCRIPT)
 ========================================= */
-.ol-tag {
+.ol-tag, .ul-tag {
     padding: 15px 15px 15px 35px;
     display: flex;
     flex-direction: column;
@@ -273,19 +275,9 @@ body {
     background-color: white;
     border: 1px solid #e2e8f0;
     border-radius: 8px;
-    list-style-type: decimal;
 }
-
-.ul-tag {
-    padding: 15px 15px 15px 35px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background-color: white;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    list-style-type: disc;
-}
+.ol-tag { list-style-type: decimal; }
+.ul-tag { list-style-type: disc; }
 .li-tag { color: #334155; font-size: 14px; display: list-item; padding: 5px; }
 
 .form-tag {
@@ -297,9 +289,7 @@ body {
     border: 1px solid #e2e8f0;
     border-radius: 8px;
 }
-.label-tag {
-    padding: 2px 5px;
-}
+.label-tag { padding: 2px 5px; }
 .input-tag {
     background-color: #f8fafc;
     border: 1px solid #cbd5e1;
@@ -307,6 +297,7 @@ body {
     border-radius: 6px;
     color: #94a3b8;
     font-size: 13px;
+    width: 100%;
 }
 .button-tag {
     background-color: #2563eb;
@@ -317,9 +308,9 @@ body {
     font-weight: 600;
     text-align: center;
     font-size: 14px;
+    width: 100%;
 }
 
-/* SCRIPT TAG (Bagian Bawah) */
 .script-tag {
     background-color: #f8fafc;
     border: 1px solid #e2e8f0;
@@ -327,4 +318,68 @@ body {
     padding: 15px;
     text-align: center;
     border-radius: 6px;
+}
+
+
+/* =========================================
+   TAMPILAN RESPONSIVE (UNTUK HP & TABLET)
+========================================= */
+@media (max-width: 768px) {
+    body {
+        padding: 30px 10px 80px 10px;
+        gap: 80px;
+    }
+
+    .stage-title {
+        font-size: 16px;
+        padding: 10px 20px;
+        line-height: 1.4;
+    }
+
+    /* Ubah Flex agar Section dan Article tertumpuk vertikal, bukan bersebelahan */
+    .real-layout-wrapper {
+        flex-direction: column;
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .real-section, .real-article {
+        flex: none; /* Hilangkan proporsi flex */
+        width: 100%; /* Penuhi layar HP */
+        padding: 15px;
+    }
+
+    .real-header {
+        padding: 15px 20px;
+    }
+    
+    .real-nav {
+        padding: 10px 20px;
+        gap: 15px;
+        justify-content: center; /* Menu navigasi ditengah */
+        flex-wrap: wrap; /* Jika menu banyak, akan turun ke baris baru */
+    }
+
+    .real-main {
+        padding: 10px;
+    }
+
+    .h1-tag {
+        font-size: 22px;
+    }
+
+    .script-tag {
+        margin: 0 15px 10px 15px;
+    }
+
+    .title-tag {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+
+    /* Sesuaikan ukuran label pop-up agar tidak kepotong di HP */
+    .label {
+        font-size: 10px;
+        padding: 4px 6px;
+    }
 }
